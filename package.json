@@ -1,8 +1,8 @@
 {
   "name": "@sebride4988/function-utils",
   "version": "1.0.9",
-  "main": "dist/index.esm.js",
-  "module": "dist/index.esm.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "files": [
     "dist"
   ],
@@ -11,22 +11,23 @@
   "author": "sebride4988 <sebride4988@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "prebuild": "yarn && yarn build:clean && yarn && yarn build:types",
-    "prebuild:watch": "yarn && yarn build:clean && yarn && yarn build:types",
-    "build:clean": "rimraf dist tsconfig.tsbuildinfo",
-    "build:types": "tsc --emitDeclarationOnly --project tsconfig.json",
+    "prebuild": "yarn",
     "build": "rollup -c",
-    "build:watch": "rollup -cw"
+    "prestart": "yarn",
+    "start": "rollup -cw"
   },
   "devDependencies": {
     "@babel/core": "^7.12.13",
     "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-typescript": "^8.1.1",
     "eslint": "^7.19.0",
     "rollup": "^2.38.4",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-dts": "^2.0.1",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.29.0",
     "tslib": "^2.1.0",
     "typescript": "^4.1.3"
   },
